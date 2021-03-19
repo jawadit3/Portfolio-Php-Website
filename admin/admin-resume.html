@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <title>Document</title>
+    <style>
+    a{
+        color:black;
+        font-weight: 500;
+        color: #333;
+        font-size:0.9em;
+    }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark ">
+        <a class="navbar-brand" href="#"><strong>Portfolio</strong></a>
+        <ul class="navbar-nav ml-auto ">
+          <li class="nav-item ">
+            <a class="nav-link navbar-brand pull-right" href="#"><strong>Logout</strong></a>
+          </li>
+          
+        </ul>
+      </nav>
+      <div class="container-fluid" style="border:2px solid green; height: auto">
+            <div class="row" style="border:2px solid red;">
+                <div class=" col-lg-2  " style="border:2px solid yellow;height: calc(100vh - 64px);background:#f8f9fa; ">
+                        <div class="d-flex flex-column">
+                                <div class="d-flex flex-column mt-4 " style="border:1px solid red;width:150px;" >
+                                        <div class="mb-3">
+                                            <h6 class="text-muted">Edit/Setup</h6>
+                                        </div>
+                                        <div class="mb-3">
+                                            <a href="" >Home</a>
+                                        </div>
+                                        <div class="mb-3">
+                                            <a href="">Edit About</a>
+                                        </div>
+                                        <div class="mb-3">
+                                            <a href="">Edit Skill</a>
+                                        </div>
+                                        <div class="mb-3">
+                                            <a href="">Edit Resume</a>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-column mt-4 " style="border:1px solid red;width:150px;" >
+                                            <div class="mb-3">
+                                                <h6 class="text-muted">Account Settings</h6>
+                                            </div>
+                                            <div class="mb-3">
+                                                <a href="" >Edit Profile</a>
+                                            </div>
+                                    </div>
+                        </div>
+                        
+                       
+                    </div>
+                    <div class="col-lg-10 py-1" style="border:3px solid green; overflow-y: scroll;height: calc(100vh - 64px);">
+                        <h2 class="mb-2">Edit Resume Section</h2>
+                        
+                        <form action="/action_page.php">
+                            <div class="form-row">
+                                <div class="form-group col-lg-4">
+                                        <label >Select Category</label>
+                                        <select class="form-control" name="category">
+                                          <option>Education</option>
+                                          <option>Experience</option>
+                                        </select>
+                                </div>
+                                <div class="form-group col-lg-8">
+                                    <label >Course/Position Name</label>
+                                    <input type="text" class="form-control" required name="title" placeholder="Bachelors of Computer Science">
+                                </div>
+                                <div class="form-group col-lg-8">
+                                    <label >Institute or Company Name</label>
+                                    <input type="text" class="form-control" required name="og_name" placeholder="Working at Habib Pvt.Ltd , Rawal...">
+                                </div>
+                                <div class="form-group col-lg-4">
+                                        <label >Duration or Time Period</label>
+                                        <input type="text" class="form-control" required name="year" placeholder="2016-2020">
+                                </div>
+                                <div class="form-group col-lg-12">
+                                        <label for="comment">Description (Optional)</label>
+                                        <textarea class="form-control" rows="3" required name="description"
+                                        placeholder="I am ambitious and driven. I thrive on challenge and constantly set goals for myself, so I have something to strive towards. I'm not comfortable with settling, and I'm always looking for an opportunity to do better and achieve greatness. In my previous role, I was promoted three times in less than two years."></textarea>
+                                </div>
+                                
+                            </div>
+                                        
+                                  <input type="submit" name="save" class="btn btn-primary  ml-auto " value="Save Changes" style="display:block;"/>     
+                          </form>
+
+                          <table class="table table-stripped table-sm mt-3">
+                              <thead>
+                                  <tr>
+                                      <th>Id</th>
+                                      <th>Category</th>
+                                      <th>Course/Position</th>
+                                      <th>Duration</th>
+                                      <th>Action</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                  <tr>
+  <!-- The Modal -->
+  <div class="modal fade" id="myModal">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+          
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title">Edit Skill</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            
+            <!-- Modal body -->
+            <div class="modal-body">
+              <form action="" >
+                <div class="form-row">
+                    <div class="col-md-6">
+                        <label for="edit_txt1">Skill</label>
+                        <input type="text" name="edit_txt1" id="edit_txt1" class="form-control" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="edit_txt2">Expertise</label>
+                        <input type="text" name="edit_txt2" id="edit_txt2" class="form-control" required>
+                    </div>
+                </div>
+                
+              </form>
+            </div>
+            
+            <!-- Modal footer -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Update</button>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      
+    </div>
+                                      <td>#1</td>
+                                      <td>Education</td>
+                                      <td>Bachelors of Software Engineering</td>
+                                      <td>2018-2022</td>
+                                      <td>
+                                            <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">Edit</button>
+                                            <button><a href="" class="btn btn-danger btn-sm">Delete</a></button>
+                                      </td>
+                                  </tr>
+                                  
+                              </tbody>
+                          </table>
+                            
+                    </div>
+                </div>
+      </div>
+</body>
+</html>
